@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onScroll="#zoom" prefHeight="523.0" prefWidth="799.9999000000025" style="-fx-background-color: #bbcbf3;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Trigonometria.CicloTrigonometricoController">
+  <children>
+    <Arc fx:id="ArcoMenor" layoutX="361.0" layoutY="268.0" radiusX="30.0" radiusY="30.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <fill>
+        <Color blue="1.000" green="0.576" opacity="0.000" red="0.122" fx:id="x1" />
+      </fill>
+    </Arc>
+    <Line fx:id="TracoTan" endX="170.0" fill="TRANSPARENT" layoutX="362.0" layoutY="351.0" opacity="0.33" strokeType="OUTSIDE" visible="false" />
+    <Line fx:id="EixoY" endX="300.0" layoutX="261.0" layoutY="268.0" startX="-100.0" />
+    <Line fx:id="EixoX" endX="300.0" layoutX="261.0" layoutY="268.0" rotate="90.0" startX="-100.0" />
+    <Line fx:id="LinhaCossec" endY="-170.0" layoutX="361.0" layoutY="350.0" strokeWidth="2.0" visible="false">
+      <stroke>
+        <Color blue="0.678" green="0.149" red="0.984" fx:id="x9" />
+      </stroke>
+    </Line>
+    <Line fx:id="TracoSec" layoutX="529.0" layoutY="350.0" visible="false" />
+    <Circle fx:id="Circunferencia" fill="$x1" layoutX="361.0" layoutY="268.0" radius="171.0" stroke="BLACK" strokeType="INSIDE" />
+    <Line fx:id="TracoCossec" layoutX="360.0" layoutY="350.0" visible="false" />
+    <Line fx:id="TracoCotan" endY="-170.0" layoutX="361.0" layoutY="350.0" opacity="0.35" visible="false" />
+    <Line fx:id="LinhaCotan" layoutX="361.0" layoutY="179.0" strokeWidth="2.0" visible="false">
+      <stroke>
+        <Color blue="0.075" green="0.620" red="0.212" fx:id="x7" />
+      </stroke>
+    </Line>
+    <Line fx:id="AngSup" layoutX="361.0" layoutY="350.0" strokeType="OUTSIDE" style="-fx-stroke-dash-array: 8 8 8 8;" visible="false">
+      <stroke>
+        <Color blue="0.000" green="0.965" red="1.000" fx:id="x5" />
+      </stroke>
+    </Line>
+    <Line fx:id="LinhaSec" layoutX="361.0" layoutY="350.0" strokeWidth="2.0" visible="false">
+      <stroke>
+        <Color blue="1.000" green="0.224" red="0.153" fx:id="x8" />
+      </stroke>
+    </Line>
+    <Line fx:id="LinhaTan" fill="TRANSPARENT" layoutX="533.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="2.0" visible="false">
+      <stroke>
+        <Color blue="0.765" green="0.090" red="0.573" fx:id="x6" />
+      </stroke>
+    </Line>
+    <Line fx:id="AngComp" layoutX="361.0" layoutY="350.0" strokeType="OUTSIDE" style="-fx-stroke-dash-array: 8 8 8 8;" visible="false">
+      <stroke>
+        <Color blue="0.000" green="0.341" red="0.933" fx:id="x3" />
+      </stroke>
+    </Line>
+    <Line fx:id="LinhaCos" endX="250.0" layoutX="532.0" layoutY="269.0" rotate="90.0" startX="-250.0" strokeType="OUTSIDE" strokeWidth="0.5" style="-fx-stroke-dash-array: 8 8 8 8;" />
+    <Line fx:id="LinhaSen" endX="250.0" layoutX="361.0" layoutY="62.0" startX="-250.0" strokeType="OUTSIDE" strokeWidth="0.5" style="-fx-stroke-dash-array: 8 8 8 8;" />
+    <Line fx:id="AngSim1" layoutX="361.0" layoutY="350.0" style="-fx-stroke-dash-array: 8 8 8 8;" visible="false">
+      <stroke>
+        <Color blue="0.643" green="0.035" red="0.259" fx:id="x2" />
+      </stroke>
+    </Line>
+    <Line fx:id="AngSim2" layoutX="361.0" layoutY="350.0" stroke="$x2" style="-fx-stroke-dash-array: 8 8 8 8;" visible="false" />
+    <Line fx:id="AngSim3" layoutX="361.0" layoutY="350.0" stroke="$x2" style="-fx-stroke-dash-array: 8 8 8 8;" visible="false" />
+    <Line fx:id="lado1" layoutX="361.0" layoutY="351.0" stroke="$x2" visible="false" />
+    <Line fx:id="lado2" layoutX="362.0" layoutY="351.0" stroke="$x2" visible="false" />
+    <Line fx:id="lado3" layoutX="362.0" layoutY="351.0" stroke="$x2" visible="false" />
+    <Line fx:id="lado4" layoutX="362.0" layoutY="351.0" stroke="$x2" visible="false" />
+    <Arc fx:id="ArcoMaior" fill="$x1" layoutX="361.0" layoutY="351.0" radiusX="171.0" radiusY="171.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" visible="false" />
+    <ImageView id="btnTriangulos" fx:id="btnTriangulos" fitHeight="84.0" fitWidth="149.0" layoutX="0.0" layoutY="163.0" onMouseClicked="#goTriangulos" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@Triangulos.jpg" />
+      </image>
+    </ImageView>
+    <Slider fx:id="slide" blockIncrement="5.0" focusTraversable="false" layoutX="624.0" layoutY="52.0" majorTickUnit="30.0" max="360.0" minorTickCount="5" onMouseClicked="#slideact" onMouseDragged="#slideact" onScroll="#zoom" showTickLabels="true" />
+    <Label fx:id="lgrau" layoutX="319.0" layoutY="204.0" />
+    <Button fx:id="btnAng" focusTraversable="false" layoutX="673.0" layoutY="95.0" mnemonicParsing="false" onAction="#marcAng" text="Marcar Ângulo" />
+    <TextField fx:id="txtAng" focusTraversable="false" layoutX="612.0" layoutY="95.0" onKeyPressed="#hotkey" onScroll="#zoom" prefHeight="25.0" prefWidth="57.0" />
+    <Label fx:id="lblVoltas" layoutX="612.0" layoutY="128.0" text="Voltas:" />
+    <Label fx:id="lblNumVoltas" layoutX="711.0" layoutY="128.0" text="0" />
+    <ImageView id="btnEixoCartesiano" fx:id="btnEixoCartesiano" fitHeight="84.0" fitWidth="113.0" layoutX="0.0" layoutY="89.0" onMouseClicked="#goEixo" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@EixoCartesiano.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="btnPopUp" fitHeight="33.0" fitWidth="57.0" layoutX="748.0" layoutY="19.0" onMouseClicked="#popUp" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../imagens/config.jpg" />
+      </image>
+    </ImageView>
+    <Pane fx:id="panePopUp" layoutX="636.0" layoutY="151.0" onMouseDragged="#drag" onMousePressed="#inicio" prefHeight="363.0" prefWidth="157.0" style="-fx-background-color: #7c98db; -fx-border-color: #416eec; -fx-border-width: 2;">
+      <children>
+        <Label fx:id="lrad" layoutX="10.0" layoutY="341.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="lseno" layoutX="10.0" layoutY="199.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="lcotangente" layoutX="10.0" layoutY="317.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="lsecante" layoutX="10.0" layoutY="293.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="lcossecante" layoutX="10.0" layoutY="270.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="ltangente" layoutX="10.0" layoutY="246.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <Label fx:id="lcosseno" layoutX="10.0" layoutY="224.0" onMouseDragged="#drag" onMousePressed="#inicio" />
+        <CheckBox fx:id="CheckComp" focusTraversable="false" layoutX="17.0" layoutY="120.0" mnemonicParsing="false" onAction="#CheckComp" onMouseDragged="#drag" onMousePressed="#inicio" prefHeight="49.0" prefWidth="148.0" text="Complementar do simétrico do 1ºQ" textFill="$x3" visible="false" wrapText="true">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x4" />
+          </font>
+        </CheckBox>
+        <CheckBox fx:id="CheckSup" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="155.0" mnemonicParsing="false" onAction="#CheckSup" onMouseDragged="#drag" onMousePressed="#inicio" prefHeight="49.0" prefWidth="129.0" text="Suplementar do simétrico do 1ºQ" textFill="$x5" visible="false" wrapText="true" />
+        <CheckBox fx:id="CheckTan" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="6.0" mnemonicParsing="false" onAction="#checkTan" onMouseDragged="#drag" onMousePressed="#inicio" text="Tangente" textFill="$x6" />
+        <CheckBox fx:id="CheckCotan" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="32.0" mnemonicParsing="false" onAction="#checkCotan" onMouseDragged="#drag" onMousePressed="#inicio" text="Cotangente" textFill="$x7" />
+        <CheckBox fx:id="CheckSec" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="58.0" mnemonicParsing="false" onAction="#checkSec" onMouseDragged="#drag" onMousePressed="#inicio" text="Secante" textFill="$x8" />
+        <CheckBox fx:id="CheckCossec" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="84.0" mnemonicParsing="false" onAction="#checkCossec" onMouseDragged="#drag" onMousePressed="#inicio" text="Cossecante" textFill="$x9" />
+        <CheckBox fx:id="CheckSimet" focusTraversable="false" font="$x4" layoutX="17.0" layoutY="110.0" mnemonicParsing="false" onAction="#checkSimet" onMouseDragged="#drag" onMousePressed="#inicio" text="Simétricos" textFill="$x2" />
+      </children>
+    </Pane>
+    <ImageView id="btnPainel" fx:id="btnCircunferencia" fitHeight="84.0" fitWidth="113.0" layoutX="0.0" layoutY="5.0" onMouseClicked="#goCircunferencia" onMouseEntered="#rolloverPainel" onMouseExited="#normalPainel" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@CicloTrigonometrico.jpg" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>
