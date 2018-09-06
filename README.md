@@ -8,3 +8,7 @@
 * Como participante, tive a oportunidade de desenvolver as funções trigonométricas, eixo cartesiano e representação de triângulos.
 * O projeto também contava com um portal específico para matemática, com cadastro de alunos, professores e exercícios.
 Devido a facilidade de compreensão com as ferramentas matemáticas, e a pedido de alguns professores, separei essas ferramentas para mais fácil uso e ensino da trigonometria.
+
+# Execução
+* Para executar o projeto, você só precisa baixar o arquivo jar: 
+[Baixe aqui o executável](https://github.com/vittoriazago/trigonometria/raw/master/Trigonometria.jar)
